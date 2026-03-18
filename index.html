@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Porcentagens</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon-1.png" type="image/x-icon">
+  </head>
+<body>
+    <h1>Calculadora de Porcentagens</h1>
+    <div class="container">
+        <div class="calc-section">
+            <h2>Quanto é <input type="number" id="percent1" placeholder="%"> de <input type="number" id="value1" placeholder="valor">?</h2>
+            <span id="result1"></span>
+            <button onclick="calculate1()">Calcular</button>
+        </div>
+
+        <div class="calc-section">
+            <h2>O valor <input type="number" id="value2" placeholder="valor"> é qual a porcentagem de <input type="number" id="total2" placeholder="total">?</h2>
+            <span id="result2"></span>
+            <button onclick="calculate2()">Calcular</button>
+        </div>
+
+        <div class="calc-section">
+            <h2>Um valor de <input type="number" id="initial3" placeholder="inicial"> que AUMENTOU para <input type="number" id="final3" placeholder="final">. Qual foi o aumento percentual?</h2>
+            <span id="result3"></span>
+            <button onclick="calculate3()">Calcular</button>
+        </div>
+
+        <div class="calc-section">
+            <h2>Um valor de <input type="number" id="initial4" placeholder="inicial"> que DIMINUIU para <input type="number" id="final4" placeholder="final">. Qual foi a diminuição percentual?</h2>
+            <span id="result4"></span>
+            <button onclick="calculate4()">Calcular</button>
+        </div>
+
+        <div class="calc-section">
+            <h2>O valor <input type="number" id="part5" placeholder="parte"> sobre o valor <input type="number" id="total5" placeholder="total"> é quantos por cento?</h2>
+            <span id="result5"></span>
+            <button onclick="calculate5()">Calcular</button>
+        </div>
+
+        <div class="calc-section">
+            <h2>Tenho um valor de <input type="number" id="value6" placeholder="valor"> e quero AUMENTAR <input type="number" id="percent6" placeholder="%">. Qual é o resultado?</h2>
+            <span id="result6"></span>
+            <button onclick="calculate6()">Calcular</button>
+        </div>
+
+        <div class="calc-section">
+            <h2>Tenho um valor de <input type="number" id="value7" placeholder="valor"> e quero DIMINUIR <input type="number" id="percent7" placeholder="%">. Qual é o resultado?</h2>
+            <span id="result7"></span>
+            <button onclick="calculate7()">Calcular</button>
+        </div>
+
+        <div class="calc-section">
+            <h2>Tenho um valor inicial que AUMENTOU em <input type="number" id="percent8" placeholder="%"> e passou para <input type="number" id="final8" placeholder="final">. Qual é o valor inicial?</h2>
+            <span id="result8"></span>
+            <button onclick="calculate8()">Calcular</button>
+        </div>
+
+        <div class="calc-section">
+            <h2>Tenho um valor inicial que DIMINUIU em <input type="number" id="percent9" placeholder="%"> e passou para <input type="number" id="final9" placeholder="final">. Qual é o valor inicial?</h2>
+            <span id="result9"></span>
+            <button onclick="calculate9()">Calcular</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
