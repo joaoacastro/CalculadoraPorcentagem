@@ -5,64 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Porcentagens</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon-1.png" type="image/x-icon">
   </head>
 <body>
     <h1>Calculadora de Porcentagens</h1>
     <div class="container">
-        <div class="calc-section">
-            <h2>Quanto é <input type="number" id="percent1" placeholder="valor">% de <input type="number" id="value1" placeholder="valor">?</h2>
-            <span id="result1"></span>
-            <button onclick="calculate1()">Calcular</button>
+        <!-- Card 1: Quanto é X% de Y? -->
+        <div class="calc-card">
+            <h3>Quanto é</h3>
+            <div class="input-group">
+                <input type="number" id="percent1" placeholder="0">
+                <span class="label">% de</span>
+                <input type="number" id="value1" placeholder="0">
+            </div>
+            <button class="btn-calculate" onclick="calculate1()">Calcular</button>
+            <div class="result-display" id="result1">Resultado: <span></span></div>
         </div>
 
-        <div class="calc-section">
-            <h2>O valor <input type="number" id="value2" placeholder="valor"> é qual a porcentagem de <input type="number" id="total2" placeholder="total">?</h2>
-            <span id="result2"></span>
-            <button onclick="calculate2()">Calcular</button>
+        <!-- Card 2: O valor X é qual porcentagem de Y? -->
+        <div class="calc-card">
+            <h3>O valor</h3>
+            <div class="input-group">
+                <input type="number" id="value2" placeholder="0">
+                <span class="label">é qual % de</span>
+                <input type="number" id="total2" placeholder="0">
+            </div>
+            <button class="btn-calculate" onclick="calculate2()">Calcular</button>
+            <div class="result-display" id="result2">Resultado: <span></span></div>
         </div>
 
-        <div class="calc-section">
-            <h2>Um valor de <input type="number" id="initial3" placeholder="inicial"> que AUMENTOU para <input type="number" id="final3" placeholder="final">. Qual foi o aumento percentual?</h2>
-            <span id="result3"></span>
-            <button onclick="calculate3()">Calcular</button>
+        <!-- Card 3: Aumento percentual -->
+        <div class="calc-card">
+            <h3>Aumentou de</h3>
+            <div class="input-group">
+                <input type="number" id="initial3" placeholder="0">
+                <span class="label">para</span>
+                <input type="number" id="final3" placeholder="0">
+            </div>
+            <button class="btn-calculate" onclick="calculate3()">Calcular aumento %</button>
+            <div class="result-display" id="result3">Resultado: <span></span></div>
         </div>
 
-        <div class="calc-section">
-            <h2>Um valor de <input type="number" id="initial4" placeholder="inicial"> que DIMINUIU para <input type="number" id="final4" placeholder="final">. Qual foi a diminuição percentual?</h2>
-            <span id="result4"></span>
-            <button onclick="calculate4()">Calcular</button>
+        <!-- Card 4: Diminuição percentual -->
+        <div class="calc-card">
+            <h3>Diminuiu de</h3>
+            <div class="input-group">
+                <input type="number" id="initial4" placeholder="0">
+                <span class="label">para</span>
+                <input type="number" id="final4" placeholder="0">
+            </div>
+            <button class="btn-calculate" onclick="calculate4()">Calcular diminuição %</button>
+            <div class="result-display" id="result4">Resultado: <span></span></div>
         </div>
 
-        <div class="calc-section">
-            <h2>O valor <input type="number" id="part5" placeholder="parte"> sobre o valor <input type="number" id="total5" placeholder="total"> é quantos por cento?</h2>
-            <span id="result5"></span>
-            <button onclick="calculate5()">Calcular</button>
+        <!-- Card 5: Parte sobre total é quanto por cento? -->
+        <div class="calc-card">
+            <h3>Calcular porcentagem</h3>
+            <div class="input-group">
+                <input type="number" id="part5" placeholder="0">
+                <span class="label">de</span>
+                <input type="number" id="total5" placeholder="0">
+            </div>
+            <button class="btn-calculate" onclick="calculate5()">Calcular</button>
+            <div class="result-display" id="result5">Resultado: <span></span></div>
         </div>
 
-        <div class="calc-section">
-            <h2>Tenho um valor de <input type="number" id="value6" placeholder="valor"> e quero AUMENTAR <input type="number" id="percent6" placeholder="valor">%. Qual é o resultado?</h2>
-            <span id="result6"></span>
-            <button onclick="calculate6()">Calcular</button>
+        <!-- Card 6: Aumentar valor -->
+        <div class="calc-card">
+            <h3>Aumentar</h3>
+            <div class="input-group">
+                <input type="number" id="value6" placeholder="0">
+                <span class="label">em</span>
+                <input type="number" id="percent6" placeholder="0">
+                <span class="label">%</span>
+            </div>
+            <button class="btn-calculate" onclick="calculate6()">Calcular</button>
+            <div class="result-display" id="result6">Resultado: <span></span></div>
         </div>
 
-        <div class="calc-section">
-            <h2>Tenho um valor de <input type="number" id="value7" placeholder="valor"> e quero DIMINUIR <input type="number" id="percent7" placeholder="valor">%. Qual é o resultado?</h2>
-            <span id="result7"></span>
-            <button onclick="calculate7()">Calcular</button>
+        <!-- Card 7: Diminuir valor -->
+        <div class="calc-card">
+            <h3>Diminuir</h3>
+            <div class="input-group">
+                <input type="number" id="value7" placeholder="0">
+                <span class="label">em</span>
+                <input type="number" id="percent7" placeholder="0">
+                <span class="label">%</span>
+            </div>
+            <button class="btn-calculate" onclick="calculate7()">Calcular</button>
+            <div class="result-display" id="result7">Resultado: <span></span></div>
         </div>
 
-        <div class="calc-section">
-            <h2>Tenho um valor inicial que AUMENTOU em <input type="number" id="percent8" placeholder="valor">% e passou para <input type="number" id="final8" placeholder="final">. Qual é o valor inicial?</h2>
-            <span id="result8"></span>
-            <button onclick="calculate8()">Calcular</button>
+        <!-- Card 8: Valor inicial após aumento -->
+        <div class="calc-card">
+            <h3>Valor aumentou</h3>
+            <div class="input-group">
+                <span class="label">em</span>
+                <input type="number" id="percent8" placeholder="0">
+                <span class="label">% para</span>
+                <input type="number" id="final8" placeholder="0">
+            </div>
+            <button class="btn-calculate" onclick="calculate8()">Calcular valor inicial</button>
+            <div class="result-display" id="result8">Resultado: <span></span></div>
         </div>
 
-        <div class="calc-section">
-            <h2>Tenho um valor inicial que DIMINUIU em <input type="number" id="percent9" placeholder="valor">% e passou para <input type="number" id="final9" placeholder="final">. Qual é o valor inicial?</h2>
-            <span id="result9"></span>
-            <button onclick="calculate9()">Calcular</button>
+        <!-- Card 9: Valor inicial após diminuição -->
+        <div class="calc-card">
+            <h3>Valor diminuiu</h3>
+            <div class="input-group">
+                <span class="label">em</span>
+                <input type="number" id="percent9" placeholder="0">
+                <span class="label">% para</span>
+                <input type="number" id="final9" placeholder="0">
+            </div>
+            <button class="btn-calculate" onclick="calculate9()">Calcular valor inicial</button>
+            <div class="result-display" id="result9">Resultado: <span></span></div>
         </div>
     </div>
     <script src="script.js"></script>

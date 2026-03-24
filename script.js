@@ -1,100 +1,111 @@
+function setResult(resultId, value) {
+    const resultDisplay = document.getElementById(resultId);
+    if (value === '' || value === null) {
+        resultDisplay.classList.remove('active');
+    } else {
+        const span = resultDisplay.querySelector('span');
+        span.textContent = value;
+        resultDisplay.classList.add('active');
+    }
+}
+
 function calculate1() {
     const percent = parseFloat(document.getElementById('percent1').value);
     const value = parseFloat(document.getElementById('value1').value);
     if (isNaN(percent) || isNaN(value)) {
-        document.getElementById('result1').textContent = 'Por favor, insira valores válidos.';
+        setResult('result1', '');
         return;
     }
     const result = (percent / 100) * value;
-    document.getElementById('result1').textContent = `Resultado: ${result.toFixed(2)}`;
+    setResult('result1', result.toFixed(2));
 }
 
 function calculate2() {
     const value = parseFloat(document.getElementById('value2').value);
     const total = parseFloat(document.getElementById('total2').value);
     if (isNaN(value) || isNaN(total) || total === 0) {
-        document.getElementById('result2').textContent = 'Por favor, insira valores válidos.';
+        setResult('result2', '');
         return;
     }
     const result = (value / total) * 100;
-    document.getElementById('result2').textContent = `Resultado: ${result.toFixed(2)}%`;
+    setResult('result2', result.toFixed(2) + '%');
 }
 
 function calculate3() {
     const initial = parseFloat(document.getElementById('initial3').value);
     const final = parseFloat(document.getElementById('final3').value);
     if (isNaN(initial) || isNaN(final) || initial === 0) {
-        document.getElementById('result3').textContent = 'Por favor, insira valores válidos.';
+        setResult('result3', '');
         return;
     }
     const result = ((final - initial) / initial) * 100;
-    document.getElementById('result3').textContent = `Aumento: ${result.toFixed(2)}%`;
+    setResult('result3', result.toFixed(2) + '%');
 }
 
 function calculate4() {
     const initial = parseFloat(document.getElementById('initial4').value);
     const final = parseFloat(document.getElementById('final4').value);
     if (isNaN(initial) || isNaN(final) || initial === 0) {
-        document.getElementById('result4').textContent = 'Por favor, insira valores válidos.';
+        setResult('result4', '');
         return;
     }
     const result = ((initial - final) / initial) * 100;
-    document.getElementById('result4').textContent = `Diminuição: ${result.toFixed(2)}%`;
+    setResult('result4', result.toFixed(2) + '%');
 }
 
 function calculate5() {
     const part = parseFloat(document.getElementById('part5').value);
     const total = parseFloat(document.getElementById('total5').value);
     if (isNaN(part) || isNaN(total) || total === 0) {
-        document.getElementById('result5').textContent = 'Por favor, insira valores válidos.';
+        setResult('result5', '');
         return;
     }
     const result = (part / total) * 100;
-    document.getElementById('result5').textContent = `Resultado: ${result.toFixed(2)}%`;
+    setResult('result5', result.toFixed(2) + '%');
 }
 
 function calculate6() {
     const value = parseFloat(document.getElementById('value6').value);
     const percent = parseFloat(document.getElementById('percent6').value);
     if (isNaN(value) || isNaN(percent)) {
-        document.getElementById('result6').textContent = 'Por favor, insira valores válidos.';
+        setResult('result6', '');
         return;
     }
     const result = value * (1 + percent / 100);
-    document.getElementById('result6').textContent = `Resultado: ${result.toFixed(2)}`;
+    setResult('result6', result.toFixed(2));
 }
 
 function calculate7() {
     const value = parseFloat(document.getElementById('value7').value);
     const percent = parseFloat(document.getElementById('percent7').value);
     if (isNaN(value) || isNaN(percent)) {
-        document.getElementById('result7').textContent = 'Por favor, insira valores válidos.';
+        setResult('result7', '');
         return;
     }
     const result = value * (1 - percent / 100);
-    document.getElementById('result7').textContent = `Resultado: ${result.toFixed(2)}`;
+    setResult('result7', result.toFixed(2));
 }
 
 function calculate8() {
     const percent = parseFloat(document.getElementById('percent8').value);
     const final = parseFloat(document.getElementById('final8').value);
     if (isNaN(percent) || isNaN(final) || percent === -100) {
-        document.getElementById('result8').textContent = 'Por favor, insira valores válidos.';
+        setResult('result8', '');
         return;
     }
     const result = final / (1 + percent / 100);
-    document.getElementById('result8').textContent = `Valor inicial: ${result.toFixed(2)}`;
+    setResult('result8', result.toFixed(2));
 }
 
 function calculate9() {
     const percent = parseFloat(document.getElementById('percent9').value);
     const final = parseFloat(document.getElementById('final9').value);
     if (isNaN(percent) || isNaN(final) || percent === 100) {
-        document.getElementById('result9').textContent = 'Por favor, insira valores válidos.';
+        setResult('result9', '');
         return;
     }
     const result = final / (1 - percent / 100);
-    document.getElementById('result9').textContent = `Valor inicial: ${result.toFixed(2)}`;
+    setResult('result9', result.toFixed(2));
 }
 
 // Adicionar event listeners para Enter nos inputs
