@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
     --primary: #6366f1;
@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
     color: var(--text-main);
     display: flex;
@@ -82,7 +82,7 @@ h1 {
     font-size: 1rem;
     outline: none;
     transition: all 0.2s ease;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .input-group input:focus {
@@ -108,7 +108,7 @@ h1 {
     cursor: pointer;
     transition: background 0.3s ease, transform 0.1s;
     font-size: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn-calculate:hover {
@@ -163,12 +163,6 @@ h1 {
     .btn-calculate {
         padding: 10px;
         font-size: 0.95rem;
-    }
-}
-    }
-    
-    .calc-section h2 {
-        font-size: 1rem;
     }
 }
 
