@@ -1,3 +1,24 @@
+// === GERENCIAR TEMAS ===
+function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    
+    applyTheme(theme);
+}
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    applyTheme(newTheme);
+}
+
+// === FUNÇÕES DE CÁLCULO ===
 function setResult(resultId, value) {
     const resultDisplay = document.getElementById(resultId);
     if (value === '' || value === null) {
@@ -110,6 +131,15 @@ function calculate9() {
 
 // Adicionar event listeners para Enter nos inputs
 document.addEventListener('DOMContentLoaded', () => {
+    // Inicializar tema
+    initializeTheme();
+    
+    // Adicionar event listener ao botão de tema
+    const themeBtn = document.getElementById('theme-btn');
+    if (themeBtn) {
+        themeBtn.addEventListener('click', toggleTheme);
+    }
+    
     // Seção 1
     const inputs1 = document.querySelectorAll('#percent1, #value1');
     inputs1.forEach(input => {
